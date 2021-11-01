@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/31 12:21:50 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/01 15:07:56 by thakala          ###   ########.fr       */
+/*   Created: 2021/10/31 13:04:18 by thakala           #+#    #+#             */
+/*   Updated: 2021/10/31 13:29:11 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <string.h>
 
-# include <string.h>
+size_t	strlen(const char *s)
+{
+	size_t	l;
 
-size_t	strlen(const char *s);
-
-#endif
+	l = 0;
+	while (*s++)
+		l++;
+	return (l);
+}
