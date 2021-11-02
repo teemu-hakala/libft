@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/11/02 11:36:24 by thakala          ###   ########.fr        #
+#    Updated: 2021/11/02 11:44:54 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_lstnew.c \
-	ft_lstdelone \
+	ft_lstdelone.c \
 	ft_lstdel.c \
 	ft_lstadd.c \
 	ft_lstiter.c \
@@ -124,7 +124,7 @@ OBJS = \
 	ft_putendl_fd.o \
 	ft_putnbr_fd.o \
 	ft_lstnew.o \
-	ft_lstdelone \
+	ft_lstdelone.o \
 	ft_lstdel.o \
 	ft_lstadd.o \
 	ft_lstiter.o \
