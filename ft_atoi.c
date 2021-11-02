@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:19:47 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/02 13:03:14 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/02 13:14:02 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int c;
-	int r;
+	int		c;
+	int		r;
 
-	if ((*str >= '\t' && *str) || *str == ' ')
+	if ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
-	c == 1;
+	c = 1;
 	if (*str == '+')
 		str++;
 	else if (*str == '-')
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 	r = 0;
 	while (*str >= '0' && *str <= '9')
 	{
-		r = 10 * r + *str++ - '0'
+		r = 10 * r + *str++ - '0';
 	}
 	return (c * r);
 }
