@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:57:20 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/03 15:59:35 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/03 16:01:44 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strcat(char *s1, const char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int		i;
 
