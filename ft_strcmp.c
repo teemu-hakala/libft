@@ -6,11 +6,16 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:09:13 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/03 17:10:40 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 09:54:41 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	
+	while (*s1 == *s2 && *s1)
+	{
+		s1++;
+		s2++;
+	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
