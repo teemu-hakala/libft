@@ -6,29 +6,29 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:19:47 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/02 13:14:02 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 11:12:34 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int		c;
-	int		r;
+	int		coefficient;
+	int		result;
 
 	if ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
-	c = 1;
+	coefficient = 1;
 	if (*str == '+')
 		str++;
 	else if (*str == '-')
 	{
-		c = -1;
+		coefficient = -1;
 		str++;
 	}
-	r = 0;
+	result = 0;
 	while (*str >= '0' && *str <= '9')
 	{
-		r = 10 * r + *str++ - '0';
+		result = 10 * result + *str++ - '0';
 	}
-	return (c * r);
+	return (coefficient * result);
 }
