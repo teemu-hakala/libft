@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/11/04 13:44:08 by thakala          ###   ########.fr        #
+#    Updated: 2021/11/04 15:17:08 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ SRCS = $(foreach src, $(FUNCTIONS), $(addsuffix .c, $(src)))
 
 OBJS = $(foreach obj, $(FUNCTIONS), $(addsuffix .o, $(obj)))
 
-COMP_FLAGS = -Wall -Wextra -Werror
+COMP_FLAGS = -Wall -Wextra -Werror -Wconversion
 
 all: $(NAME)
 
