@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:03:12 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/03 09:06:00 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 10:41:35 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_itoa(int n)
 
 	n_len = ft_intlen(n);
 	numeral = (char *)malloc(sizeof(*numeral) * (n_len + 1));
+	if (!numeral)
+		return (0);
 	if (n < 0)
 		numeral[0] = '-';
 	i = n_len;
