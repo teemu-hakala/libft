@@ -6,13 +6,13 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:27:29 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/02 13:31:38 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 09:33:41 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isalnum(int c)
+int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
