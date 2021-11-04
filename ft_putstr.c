@@ -6,13 +6,14 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:56:19 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/04 09:56:03 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 16:46:39 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putstr(char const *s)
 {
-	ft_putstr_fd(s, 1);
+	write(1, s, ft_strlen(s));
 }
