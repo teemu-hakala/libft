@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:38:59 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/04 09:48:26 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 10:35:24 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s != (char)c)
 		s++;
