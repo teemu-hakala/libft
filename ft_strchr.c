@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:38:59 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/03 16:51:30 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 09:48:26 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@ char	*strchr(const char *s, int c)
 	while (*s != (char)c)
 		s++;
 	if (*s == (char)c)
-		return (s);
+		return ((char *)s);
 	return (0);
 }
