@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:58:11 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/02 16:00:02 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/04 10:24:57 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 0177);
 }
