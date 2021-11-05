@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:14:53 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/03 09:04:15 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/05 04:47:18 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	**str;
-	size_t	m;
+	unsigned char	*str;
 
-	str = (char **)s;
-	m = 0;
-	while (m < n)
-	{
-		*str[m] = 0;
-		m++;
-	}
+	str = (unsigned char)s;
+	while (n--)
+		*str++ = 0;
 }
