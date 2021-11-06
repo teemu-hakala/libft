@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:58:22 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/04 20:06:46 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/06 11:38:36 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	destination = (char *)dst;
 	source = (char *)src;
-	new_beginning = dst;
+	new_beginning = destination;
 	while (n--)
 		*destination++ = *source++;
 	return (new_beginning);
