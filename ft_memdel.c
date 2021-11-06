@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 11:39:06 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/06 11:45:45 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/06 12:31:58 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_memdel(void **ap)
 {
+	if (!ap)
+		return ;
 	free(*ap);
 	*ap = NULL;
 }
