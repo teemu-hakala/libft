@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/11/04 15:32:48 by thakala          ###   ########.fr        #
+#    Updated: 2021/11/08 18:52:47 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ FUNCTIONS = \
 	ft_isdigit \
 	ft_isalnum \
 	ft_isascii \
+	ft_isprint \
 	ft_toupper \
 	ft_tolower \
 	ft_memalloc \
