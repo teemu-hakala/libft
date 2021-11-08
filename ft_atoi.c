@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:19:47 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/06 15:55:38 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/08 14:14:56 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@ int	ft_atoi(const char *str)
 	int		coefficient;
 	int		result;
 
-	if (!str)
-		return (0);
 	if ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
 	coefficient = 1;
