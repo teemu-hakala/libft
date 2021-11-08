@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 18:04:07 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/07 19:08:10 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/08 18:51:09 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*result;
 
-	if (!s)
-		return (NULL);
 	result = NULL;
 	while (*s)
 		if (*s++ == (char)c)
