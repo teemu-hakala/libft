@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:38:59 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/07 17:43:07 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/08 18:50:15 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
 
-	if (!dst || !src)
-		return (0);
 	dst_len = 0;
 	while (*dst)
 	{
