@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:44:35 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/05 07:47:44 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/10 17:08:12 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	*ft_memalloc(size_t size)
 	while (size)
 		block[--size] = 0;
 	block[size] = 0;
-	return (block);
+	return ((void *)block);
 }
