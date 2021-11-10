@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:19:47 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/08 14:14:56 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/10 17:26:24 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	ft_atoi(const char *str)
 	}
 	result = 0;
 	while (*str >= '0' && *str <= '9')
-	{
 		result = 10 * result + *str++ - '0';
-	}
 	return (coefficient * result);
 }
