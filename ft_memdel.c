@@ -6,17 +6,14 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 11:39:06 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/06 12:31:58 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/10 18:32:30 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {
-	if (!ap)
-		return ;
 	free(*ap);
 	*ap = NULL;
 }
