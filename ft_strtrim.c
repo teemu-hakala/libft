@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:25:19 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/04 15:18:18 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/10 18:41:10 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static int	ft_is_whitespace(const char c)
 
 static size_t	ft_strlen_trim(const char *s, int (*f)(char))
 {
-	int		len;
-	int		whitespace_count;
+	size_t		len;
+	size_t		whitespace_count;
 
 	len = 0;
 	whitespace_count = 0;
