@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:19:25 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/05 13:48:20 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/11 09:03:20 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (string);
 		string++;
 	}
-	return (0);
+	return ((void *)0);
 }
