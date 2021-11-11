@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:03:12 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/05 07:32:11 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/11 09:14:31 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 #include <stdlib.h>
 
 static size_t	ft_intlen(int n)
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	n_len = ft_intlen(n);
 	numeral = (char *)malloc(sizeof(*numeral) * (n_len + 1));
 	if (!numeral)
-		return (0);
+		return ((char *)0);
 	i = n_len;
 	numeral[i] = '\0';
 	if (n < 0)
