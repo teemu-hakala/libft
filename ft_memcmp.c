@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 05:38:53 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/06 11:23:19 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/11 09:29:49 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		string1++;
 		string2++;
 	}
-	return (*string1 - *string2);
+	return ((int)(*string1 - *string2));
 }
