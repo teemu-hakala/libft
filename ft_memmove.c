@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:35:21 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/08 17:04:34 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/11 09:00:25 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
