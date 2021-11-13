@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:14:53 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/05 05:19:12 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/13 16:56:42 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {
