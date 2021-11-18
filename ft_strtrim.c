@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:25:19 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/10 18:41:10 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/18 10:02:23 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,8 @@ char	*ft_strtrim(char const *s)
 		s++;
 	trimmed_len = ft_strlen_trim(s, &ft_is_whitespace);
 	trimmed_str = (char *)malloc(sizeof(char) * (trimmed_len + 1));
-	return (ft_strncpy(trimmed_str, s, trimmed_len));
+	if (!trimmed_str)
+		return (NULL);
+	ft_strncpy(trimmed_str, s, trimmed_len)[trimmed_len] = '\0';
+	return (trimmed_str);
 }
