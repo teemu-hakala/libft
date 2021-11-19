@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:44:35 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/10 17:08:12 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/19 15:41:32 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memalloc(size_t size)
 	block = (char *)malloc(sizeof(char) * size);
 	if (!block)
 		return (block);
-	while (size)
-		block[--size] = 0;
-	block[size] = 0;
-	return ((void *)block);
+	ft_bzero(block, size);
+	return (block);
 }
