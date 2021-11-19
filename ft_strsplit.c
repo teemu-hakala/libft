@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/19 14:54:12 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:03:52 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,12 +92,6 @@ char	**ft_strsplit(char const *s, char c)
 		words[i] = word;
 		i++;
 	}
-	if (!i)
-	{
-		words[i] = ft_strnew(0);
-		free_all(words, word_count + 1);
-	}
-	else
-		words[i] = 0;
+	words[i] = 0;
 	return (words);
 }
