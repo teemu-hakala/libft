@@ -6,12 +6,11 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:46:10 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/19 16:47:36 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:51:50 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putendl(char const *s)
 {
