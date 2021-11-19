@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/19 12:15:23 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/19 14:54:12 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,18 @@ static char	*ft_get_next_word(const char **s_ptr, const char delimiter)
 	size_t	i;
 
 	i = 0;
-	while (*s_ptr[i])
+	word_length = 0;
+	while (**s_ptr && **s_ptr == delimiter)
+		*s_ptr += 1;
+	while ((*s_ptr)[i] && (*s_ptr)[i] != delimiter)
 	{
-		word_length = 0;
-		while (**s_ptr && **s_ptr == delimiter)
-			*s_ptr += 1;
-		while (*s_ptr[i] && *s_ptr[i] != delimiter)
-		{
-			word_length++;
-			i++;
-		}
-		word = ft_strnew(word_length);
-		if (!word)
-			return (NULL);
-		ft_fill_word(word, delimiter, s_ptr);
+		word_length++;
+		i++;
 	}
+	word = ft_strnew(word_length);
+	if (!word)
+		return (NULL);
+	ft_fill_word(word, delimiter, s_ptr);
 	return (word);
 }
 
@@ -95,6 +92,12 @@ char	**ft_strsplit(char const *s, char c)
 		words[i] = word;
 		i++;
 	}
-	words[i] = 0;
+	if (!i)
+	{
+		words[i] = ft_strnew(0);
+		free_all(words, word_count + 1);
+	}
+	else
+		words[i] = 0;
 	return (words);
 }
