@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:00:07 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 09:44:07 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 09:46:26 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	mem = ft_memdup(content, content_size);
 	if (!mem)
+	{
+		free(new);
 		return (NULL);
+	}
 	new->content = mem;
 	new->content_size = content_size;
 	return (new);
