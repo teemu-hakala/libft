@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:19:25 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 19:02:58 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:35:29 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*string;
 
 	string = (unsigned char *)s;
-	n++;
-	while (n--)
+	while (*string && n--)
 	{
 		if (*string == (unsigned char)c)
 			return (string);
-		if (!*string)
-			break ;
 		string++;
 	}
+	if (!*string && *string == (unsigned char)c)
+		return (string);
 	return ((void *)0);
 }
