@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 17:49:18 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/14 18:11:04 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:18:43 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	length;
 
 	length = ft_strlen(s);
-	new_beginning = (char *)malloc(sizeof(char) * (length + (size_t)1));
-	if (!length && !new_beginning)
+	new_beginning = (char *)malloc(sizeof(char) * (length + 1));
+	if (!new_beginning)
 		return (NULL);
 	while (*s)
 		*new_beginning++ = f(*s++);
