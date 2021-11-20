@@ -6,11 +6,12 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:00:07 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 09:46:26 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 09:50:24 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
