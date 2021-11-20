@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:57:20 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/06 15:01:02 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:14:55 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strcat(char *s1, const char *s2)
 {
 	int		i;
 
-	if (!s1 || !s2)
-		return (NULL);
 	i = 0;
 	while (s1[i])
 		i++;
