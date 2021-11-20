@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 05:38:53 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/11 09:29:49 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 14:35:19 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	string1 = (unsigned char *)s1;
 	string2 = (unsigned char *)s2;
-	while (*string1 == *string2 && n--)
+	while (--n && *string1 == *string2)
 	{
 		string1++;
 		string2++;
