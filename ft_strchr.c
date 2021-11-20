@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:38:59 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/04 10:35:24 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 15:11:09 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c)
+	while (*s && *s != (char)c)
 		s++;
 	if (*s == (char)c)
 		return ((char *)s);
