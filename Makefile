@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thakala <thakala@student.42.fr>            +#+  +:+       +#+         #
+#    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/11/08 18:52:47 by thakala          ###   ########.fr        #
+#    Updated: 2021/11/20 10:30:57 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,8 @@ FUNCTIONS = \
 	ft_lstdel \
 	ft_lstadd \
 	ft_lstiter \
-	ft_lstmap
+	ft_lstmap \
+	ft_memdup
 
 SRCS = $(foreach src, $(FUNCTIONS), $(addsuffix .c, $(src)))
 
