@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 13:39:27 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/06 14:00:48 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:13:20 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	char	*dup;
 
-	if (!s1)
-		return (NULL);
 	len = ft_strlen(s1) + 1;
 	dup = (char *)malloc(sizeof(char) * len);
 	if (dup)
