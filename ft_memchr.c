@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:19:25 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/11 09:03:20 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:02:58 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*string;
 
 	string = (unsigned char *)s;
-	while (n-- && *string)
+	n++;
+	while (n--)
 	{
 		if (*string == (unsigned char)c)
 			return (string);
+		if (!*string)
+			break ;
 		string++;
 	}
 	return ((void *)0);
