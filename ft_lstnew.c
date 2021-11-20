@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:00:07 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 09:50:24 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 10:44:02 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
+	new->next = NULL;
 	if (!content)
 	{
 		new->content = NULL;
