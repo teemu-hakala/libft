@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:29:05 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/14 18:41:55 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:18:19 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	length = ft_strlen(s);
 	new_beginning = (char *)malloc(sizeof(char) * (length + 1));
-	if (!length && !new_beginning)
+	if (!new_beginning)
 		return (new_beginning);
 	i = 0;
 	while (*s)
