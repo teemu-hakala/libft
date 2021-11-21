@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:38:59 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/13 16:41:16 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 21:57:14 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	if (dst_len > dstsize)
 		return (src_len + dstsize);
-	i = (size_t)0;
-	while (src[i] && dst_len < dstsize && i < dstsize - dst_len - (size_t)1)
+	else if (dst_len < dstsize)
 	{
-		dst[dst_len + i] = src[i];
-		i++;
+		i = dstsize - dst_len;
+		if (i > src_len)
+			i = src_len + 1;
+		if (dstsize > 0)
+			dst[dst_len + i - 1] = '\0';
+		while (--i)
+			dst[dst_len + i - 1] = src[i - 1];
 	}
-	if (dstsize > 0 && dst_len < dstsize)
-		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
