@@ -6,11 +6,11 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:19:25 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/21 18:13:43 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 19:08:31 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
