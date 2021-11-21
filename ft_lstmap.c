@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 13:35:44 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/21 14:50:31 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 16:54:55 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*new;
 	t_list	*additional;
 
-	new = ft_lstnew(f(lst)->content, lst->content_size);
+	new = f(lst);
 	if (!new)
 		return (NULL);
 	new_beginning = new;
 	lst = lst->next;
 	while (lst)
 	{
-		additional = ft_lstnew(f(lst)->content, lst->content_size);
+		additional = f(lst);
 		if (!additional)
 		{
 			ft_lstdel(&new_beginning, ft_erase_node);
