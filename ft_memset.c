@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:58:37 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/10 11:03:15 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 17:40:05 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*string;
-	unsigned char	character;
-
-	string = (unsigned char *)b;
-	character = (unsigned char)c;
-	while (len-- > 0)
-		*string++ = character;
+	while (len)
+		((unsigned char *)b)[len-- - 1] = (unsigned char)c;
 	return (b);
 }
