@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 13:20:41 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/21 13:34:49 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 16:37:04 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
+	char	*segv;
+
+	segv = 0;
+	if (!lst)
+		*segv = 0;
 	while (lst)
 	{
 		f(lst);
