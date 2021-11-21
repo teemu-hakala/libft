@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 05:38:53 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 14:44:36 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 18:19:07 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,12 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*string1;
-	unsigned char	*string2;
-
-	if (n == 0)
-		return (0);
-	string1 = (unsigned char *)s1;
-	string2 = (unsigned char *)s2;
-	while (--n && *string1 == *string2)
+	if (!n)
+		return (n);
+	while (--n && *((unsigned char *)s1) == *((unsigned char *)s2))
 	{
-		string1++;
-		string2++;
+		s1++;
+		s2++;
 	}
-	return ((int)(*string1 - *string2));
+	return ((int)(*((unsigned char *)s1) - *((unsigned char *)s2)));
 }
