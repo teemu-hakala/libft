@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:57:20 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 19:14:55 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/21 19:07:04 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i])
