@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:38:59 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/21 22:16:43 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/22 14:47:21 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i = src_len + 1;
 	if (dstsize > 0)
 		dst[dst_len + i - 1] = '\0';
-	while (--i)
-		dst[dst_len + i - 1] = src[i - 1];
+	ft_memcpy(&(dst[dst_len]), src, --i);
 	return (dst_len + src_len);
 }
