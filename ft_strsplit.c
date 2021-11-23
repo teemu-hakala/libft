@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/19 16:03:52 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/23 15:10:06 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static void	ft_fill_word(char *word, const char delimiter, const char **s_ptr)
 		*word++ = **s_ptr;
 		*s_ptr += 1;
 	}
+	*word = '\0';
 }
 
 static char	*ft_get_next_word(const char **s_ptr, const char delimiter)
@@ -54,7 +55,7 @@ static char	*ft_get_next_word(const char **s_ptr, const char delimiter)
 		word_length++;
 		i++;
 	}
-	word = ft_strnew(word_length);
+	word = (char *)malloc(sizeof(char) * (word_length + 1));
 	if (!word)
 		return (NULL);
 	ft_fill_word(word, delimiter, s_ptr);
@@ -92,6 +93,5 @@ char	**ft_strsplit(char const *s, char c)
 		words[i] = word;
 		i++;
 	}
-	words[i] = 0;
 	return (words);
 }
