@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/11/20 10:30:57 by thakala          ###   ########.fr        #
+#    Updated: 2021/11/23 21:26:35 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,8 @@ FUNCTIONS = \
 	ft_lstadd \
 	ft_lstiter \
 	ft_lstmap \
-	ft_memdup
+	ft_memdup \
+	ft_isspace
 
 SRCS = $(foreach src, $(FUNCTIONS), $(addsuffix .c, $(src)))
 
