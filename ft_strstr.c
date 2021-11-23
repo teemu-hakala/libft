@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 14:45:42 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/10 15:16:40 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/23 15:34:00 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t	h;
 	size_t	n;
 
-	h = 0;
-	while (haystack[h])
+	while (*haystack)
 	{
 		n = 0;
-		while (needle[n] && haystack[h + n] == needle[n])
+		while (needle[n] && haystack[n] == needle[n])
 			n++;
 		if (!needle[n])
-			return ((char *)&haystack[h]);
-		h++;
+			return ((char *)haystack);
+		haystack++;
 	}
 	if (!*needle)
 		return ((char *)haystack);
