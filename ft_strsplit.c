@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/24 16:54:54 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/24 16:58:13 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	**ft_strsplit(char const *s, char c)
 	char	*word;
 
 	word_count = ft_count_words(s, c);
-	words = (char **)ft_memalloc(sizeof(*words) * (word_count + 1));
+	words = (char **)malloc(sizeof(*words) * (word_count + 1));
 	if (!words)
 		return (NULL);
 	i = 0;
@@ -88,9 +88,10 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		word = ft_get_next_word(&s, c);
 		if (!word)
-			return (free_all(words, word_count + 1));
+			return (free_all(words, i - 1));
 		words[i] = word;
 		i++;
 	}
+	words[i] = 0;
 	return (words);
 }
