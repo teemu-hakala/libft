@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 18:30:31 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/10 18:32:00 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/24 19:44:53 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {
-	free(*as);
-	*as = NULL;
+	ft_memdel((void **)as);
 }
