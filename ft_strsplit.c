@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/24 16:58:13 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/24 18:10:16 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,9 @@ static void	*free_all(char **words, size_t count)
 	size_t	i;
 
 	i = 0;
-	while (i < count)
-		free(words[i++]);
+	if (count != (size_t)(-1))
+		while (i <= count)
+			free(words[i++]);
 	free(words);
 	return (NULL);
 }
@@ -77,7 +78,6 @@ char	**ft_strsplit(char const *s, char c)
 	size_t	word_count;
 	size_t	i;
 	char	**words;
-	char	*word;
 
 	word_count = ft_count_words(s, c);
 	words = (char **)malloc(sizeof(*words) * (word_count + 1));
@@ -86,10 +86,9 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	while (i < word_count)
 	{
-		word = ft_get_next_word(&s, c);
-		if (!word)
+		words[i] = ft_get_next_word(&s, c);
+		if (!words[i])
 			return (free_all(words, i - 1));
-		words[i] = word;
 		i++;
 	}
 	words[i] = 0;
