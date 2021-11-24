@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:29:05 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/20 19:18:19 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/24 20:43:58 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*new_beginning;
 	size_t			length;
-	unsigned int	i;
 
 	length = ft_strlen(s);
-	new_beginning = (char *)malloc(sizeof(char) * (length + 1));
-	if (!new_beginning)
-		return (new_beginning);
-	i = 0;
-	while (*s)
+	new_beginning = (char *)malloc(sizeof(char) * (++length));
+	if (new_beginning)
 	{
-		*new_beginning++ = f(i++, *s++);
+		new_beginning[--length] = '\0';
+		while (--length + 1)
+			new_beginning[length] = f((unsigned int)length, s[length]);
 	}
-	*new_beginning = *s;
-	return (new_beginning - length);
+	return (new_beginning);
 }
