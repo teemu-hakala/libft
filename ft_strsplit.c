@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/24 18:10:16 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/24 18:32:56 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,8 @@ static char	*ft_get_next_word(const char **s_ptr, const char delimiter)
 
 static void	*free_all(char **words, size_t count)
 {
-	size_t	i;
-
-	i = 0;
-	if (count != (size_t)(-1))
-		while (i <= count)
-			free(words[i++]);
+	while (count + 1 > 0)
+		free(words[count--]);
 	free(words);
 	return (NULL);
 }
