@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 20:33:39 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/17 20:43:10 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/24 21:12:33 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,17 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*result;
+	size_t	len1;
+	size_t	len2;
 
-	result = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	result = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
 	if (!result)
 		return (NULL);
-	ft_strcpy(result, s1);
-	ft_strcat(result, s2);
+	while (len2-- + 1 > 0)
+		result[len1 + (len2 + 1)] = s2[len2 + 1];
+	while (len1-- > 0)
+		result[len1] = s1[len1];
 	return (result);
 }
