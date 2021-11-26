@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/24 18:32:56 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/26 19:03:24 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ static size_t	ft_count_words(const char *string, const char delimiter)
 	if (!delimiter)
 		return (1);
 	i = (size_t)(-1);
-	while (string[++i] && string[i + 1])
-		if ((string[i] == delimiter && string[i + 1] != delimiter)
-			|| (i == 0 && string[i] != delimiter))
+	words += (string[++i] != delimiter);
+	while (string[i++] && string[i + 1])
+		if ((string[i] == delimiter && string[i + 1] != delimiter))
 			words++;
 	return (words);
 }
