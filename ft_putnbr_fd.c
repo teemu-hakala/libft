@@ -6,12 +6,25 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 09:30:17 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/26 22:26:21 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/26 23:13:32 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
+	#include <stdio.h>
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	sign;
+
+	sign = -(n < 0) | 0x1;
+	if (n)
+		ft_putnbr_fd(n / 10, fd);
+	if (sign == -1 && n > -10)
+		printf("-");
+	printf("%d\n", sign * (n % 10));
+}
 
 void	ft_putnbr_fd_0(int n, int fd)
 {
@@ -88,7 +101,7 @@ void	ft_putnbr_fd_20(int n, int fd)
 	ft_putchar_fd((char)n + '0', fd);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd_21(int n, int fd)
 {
 	if (n < -9 || n > 9)
 		ft_putnbr_fd(n / 10, fd);
