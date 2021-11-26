@@ -6,13 +6,38 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 09:30:17 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/26 23:40:32 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/27 00:23:04 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 	#include <stdio.h>
+void	ft_putnbr_fd_t2(int n, int fd)
+{
+	int		sign;
+
+	sign = n & (int)0x80000000;
+	if (n)
+		ft_putnbr_fd(n / 10, fd);
+	if (sign >> 31 == 0x1 && n > -10)
+		printf("-");
+	if (n)
+		printf("%c\n", (char)((sign ^ n) % 10) + '0');
+}
+
+void	ft_putnbr_fd_t1(int n, int fd)
+{
+	int		sign;
+
+	sign = n & (int)0x80000000;
+	if (n)
+		ft_putnbr_fd(n / 10, fd);
+	if (sign >> 31 == 0x1 && n > -10)
+		ft_putchar_fd('-', fd);
+	if (n)
+		ft_putchar_fd((char)(sign ^ n % 10) + '0', fd);
+}
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -22,9 +47,9 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n)
 		ft_putnbr_fd(n / 10, fd);
 	if (sign == -1 && n > -10)
-		printf("-");
+		ft_putchar_fd('-', fd);
 	if (n)
-		printf("%d\n", sign * (n % 10));
+		ft_putchar_fd((char)(sign * (n % 10)) + '0', fd);
 }
 
 void	ft_putnbr_fd_0(int n, int fd)
