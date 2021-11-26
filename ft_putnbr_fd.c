@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 09:30:17 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/27 00:34:00 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/27 00:48:34 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,11 @@ void	ft_putnbr_fd_t1(int n, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	sign;
-
-	sign = -(n < 0) | 0x1;
 	if (n / 10)
 		ft_putnbr_fd(n / 10, fd);
-	if (sign == -1 && n > -10)
+	if ((-(n < 0) | 0x1) == -1 && n > -10)
 		ft_putchar_fd('-', fd);
-	ft_putchar_fd((char)(sign * (n % 10)) + '0', fd);
+	ft_putchar_fd((char)((-(n < 0) | 0x1) * (n % 10)) + '0', fd);
 }
 
 void	ft_putnbr_fd_0(int n, int fd)
