@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 09:30:17 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/26 22:18:00 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/26 22:26:21 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		return (ft_putchar_fd((char)(-n) + '0', fd));
 	}
-	n %= 10;
-	n *= (-(n < 0)) | 0x1;
+	n = (n % 10) * ((-((n % 10) < 0)) | 0x1);
 	ft_putchar_fd((char)n + '0', fd);
 }
