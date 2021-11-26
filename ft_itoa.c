@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:03:12 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/26 20:45:51 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/26 20:52:39 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char	*ft_itoa(int n)
 	{
 		*--numeral = '0' + n % 10;
 		n /= 10;
+		numeral -= !(n || numeral[-1] != '-');
 	}
 	return (numeral);
 }
