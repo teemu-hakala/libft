@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thakala <thakala@student.42.fr>            +#+  +:+       +#+        */
+/*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:47:43 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/14 18:50:25 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/26 18:05:53 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	while (*s1 == *s2 && *s1)
-	{
-		s1++;
-		s2++;
-	}
-	return (*s1 == *s2);
+	while (*s1++ == *s2++ && *(s1 - 1))
+		;
+	return (*(s1 - 1) == *(s2 - 1));
 }
