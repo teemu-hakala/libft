@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 09:30:17 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/27 00:55:53 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/27 10:40:13 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,56 @@ void	ft_putnbr_fd_t1(int n, int fd)
 		ft_putchar_fd((char)(sign ^ n % 10) + '0', fd);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd_t3(int n, int fd)
 {
 	if (n / 10)
 		ft_putnbr_fd(n / 10, fd);
 	if (n > -10 && (-(n < 0) | 0x1) == -1)
 		ft_putchar_fd('-', fd);
 	ft_putchar_fd((char)((-(n < 0) | 0x1) * (n % 10)) + '0', fd);
+}
+
+void	decimal_to_binary(int n)
+{
+	int		c;
+	int		d;
+	int		t;
+
+	t = 0;
+	c = 32;
+	while (--c >= 0)
+	{
+		d = n >> c;
+		if (d & 1)
+			write(1, "1", 1);
+		else
+			write(1, "0", 1);
+		t++;
+	}
+	write(1, "\n", 1);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	int dec;
+
+	if (n / 10)
+		ft_putnbr_fd(n / 10, fd);
+	if (n > -10)
+		ft_putchar_fd('-', fd);
+
+	dec = n % 10;
+	decimal_to_binary();
+	decimal_to_binary(~dec ^ (int)0x80000000);
+	decimal_to_binary(dec & (int)0x80000001);
+	//decimal_to_binary(dec &^ (int)0x80000000);
+	decimal_to_binary(dec);
+	dec = ~dec;
+	decimal_to_binary(dec);
+	dec &= 0x80000001;
+	decimal_to_binary(dec);
+	decimal_to_binary((int)0x80000001);
+	ft_putchar_fd((char)(~(n % 10) & 0x80000001) + '0', fd);
 }
 
 void	ft_putnbr_fd_0(int n, int fd)
