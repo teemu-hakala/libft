@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 09:30:17 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/27 10:40:13 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/27 11:09:21 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,21 +74,13 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n / 10)
 		ft_putnbr_fd(n / 10, fd);
-	if (n > -10)
+	if (n > -10 && (-(n < 0) | 0x1))
 		ft_putchar_fd('-', fd);
-
 	dec = n % 10;
-	decimal_to_binary();
-	decimal_to_binary(~dec ^ (int)0x80000000);
-	decimal_to_binary(dec & (int)0x80000001);
-	//decimal_to_binary(dec &^ (int)0x80000000);
 	decimal_to_binary(dec);
-	dec = ~dec;
-	decimal_to_binary(dec);
-	dec &= 0x80000001;
-	decimal_to_binary(dec);
-	decimal_to_binary((int)0x80000001);
-	ft_putchar_fd((char)(~(n % 10) & 0x80000001) + '0', fd);
+	decimal_to_binary((dec & (int)0x80000000) + dec);
+	decimal_to_binary(((~dec) & (int)0x80000000) + ~dec);
+	ft_putchar_fd((char)(~(n % 10) & (int)0x80000001) + '0', fd);
 }
 
 void	ft_putnbr_fd_0(int n, int fd)
