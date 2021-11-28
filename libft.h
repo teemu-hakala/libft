@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:21:50 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/23 21:14:25 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/28 12:38:25 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void	*ft_memdup(const void *memory, size_t size);
 int		ft_isspace(int c);
+char	*ft_strpbrk(const char *s, const char *charset);
 
 #endif
