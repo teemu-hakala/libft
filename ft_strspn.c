@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 18:02:00 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/28 18:20:27 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/28 19:02:19 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ size_t	ft_strspn(const char *s, const char *charset)
 {
 	size_t	span;
 	size_t	c;
+	char	found;
 
 	span = 0;
 	--s;
@@ -23,8 +24,17 @@ size_t	ft_strspn(const char *s, const char *charset)
 	{
 		++s;
 		c = 0;
-		while (charset[c])
-			if (charset[c] != *s || !*s)
-				return (span);
+		found = 0;
+		while (*s && charset[c])
+		{
+			if (charset[c++] == *s)
+			{
+				++span;
+				found = 1;
+				break ;
+			}
+		}
+		if (!found || !*s)
+			return (span);
 	}
 }
