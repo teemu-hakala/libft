@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 12:22:39 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/28 12:36:14 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/28 16:33:55 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strpbrk(const char *s, const char *charset)
 		c = 0;
 		while (charset[c])
 			if (charset[c++] == *s)
-				return (s);
+				return ((char *)s);
 	}
 	return (NULL);
 }
