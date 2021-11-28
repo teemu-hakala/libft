@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:21:50 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/28 12:54:35 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/28 18:21:07 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ void	*ft_memdup(const void *memory, size_t size);
 int		ft_isspace(int c);
 char	*ft_strpbrk(const char *s, const char *charset);
 char	*ft_strsep(char **stringp, const char *delim);
+size_t	ft_strspn(const char *s, const char *charset);
 
 #endif
