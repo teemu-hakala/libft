@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:21:50 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/29 21:52:22 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/29 22:25:30 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ char	*ft_strpbrk(const char *s, const char *charset);
 char	*ft_strsep(char **stringp, const char *delim);
 size_t	ft_strspn(const char *s, const char *charset);
 size_t	ft_strcspn(const char *s, const char *charset);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 #endif

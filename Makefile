@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/11/28 19:04:32 by thakala          ###   ########.fr        #
+#    Updated: 2021/11/29 22:08:17 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,8 @@ FUNCTIONS = \
 	ft_strpbrk \
 	ft_strsep \
 	ft_strspn \
-	ft_strcspn
+	ft_strcspn \
+	ft_strlcpy
 
 SRCS = $(foreach src, $(FUNCTIONS), $(addsuffix .c, $(src)))
 
