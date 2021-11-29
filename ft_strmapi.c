@@ -6,14 +6,14 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:29:05 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/24 20:43:58 by thakala          ###   ########.fr       */
+/*   Updated: 2021/11/29 21:51:49 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int i, char c))
 {
 	char			*new_beginning;
 	size_t			length;
