@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 10:09:08 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/05 10:22:18 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/05 10:25:40 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ static size_t	ft_count_words(const char *string, const char delimiter)
 	size_t	words;
 	size_t	i;
 
-	if (!delimiter)
-		return (1);
 	words = 0;
 	i = 0;
 	words += string[i] != delimiter;
@@ -43,17 +41,12 @@ static char	*ft_get_next_word(const char **s_ptr, const char delimiter)
 {
 	char	*word;
 	size_t	word_length;
-	size_t	i;
 
-	i = 0;
 	word_length = 0;
 	while (**s_ptr && **s_ptr == delimiter)
 		*s_ptr += 1;
-	while ((*s_ptr)[i] && (*s_ptr)[i] != delimiter)
-	{
+	while ((*s_ptr)[word_length] && (*s_ptr)[word_length] != delimiter)
 		word_length++;
-		i++;
-	}
 	word = (char *)malloc(sizeof(char) * (word_length + 1));
 	if (!word)
 		return (NULL);
