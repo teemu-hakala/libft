@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:03:12 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/07 14:33:52 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/08 11:00:47 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,19 @@ char	*ft_itoa(int n)
 	numeral = (char *)malloc(sizeof(*numeral) * (n_len + 1));
 	if (!numeral)
 		return (NULL);
-	numeral += n_len;
-	*numeral = '\0';
+	numeral[n_len] = '\0';
 	if (n < 0)
 	{
-		*(numeral - n_len) = '-';
-		*--numeral = '0' + -(n % 10);
+		*numeral = '-';
+		numeral[--n_len] = '0' + -(n % 10);
 		n /= -10;
-		numeral -= !n;
 	}
 	else if (n == 0)
-		*--numeral = '0';
+		numeral[--n_len] = '0';
 	while (n)
 	{
-		*--numeral = '0' + n % 10;
+		numeral[--n_len] = '0' + n % 10;
 		n /= 10;
-		numeral -= !n && ((size_t)numeral & 0xF);
 	}
 	return (numeral);
 }
