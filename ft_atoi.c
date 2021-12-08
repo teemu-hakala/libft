@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:19:47 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/08 13:14:36 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/08 14:12:03 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ int	ft_atoi(const char *str)
 		{
 			if (coefficient == -1)
 				return (0);
-			else
-				return (-1);
+			return (-1);
 		}
 	}
 	return ((int)result);
