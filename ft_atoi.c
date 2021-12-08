@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:19:47 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/26 20:17:41 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/08 13:14:36 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int		coefficient;
-	int		result;
+	char	coefficient;
+	long	result;
 
 	while (ft_isspace(*str))
 		str++;
@@ -23,7 +23,20 @@ int	ft_atoi(const char *str)
 	if (*str == '+' || *str == '-')
 		coefficient = -(*str++ - 44);
 	result = 0;
+	while (*str == '0')
+		str++;
+	if (ft_isdigit(*str))
+		result = coefficient * (*str++ - '0');
 	while (ft_isdigit(*str))
-		result = 10 * result + *str++ - '0';
-	return (coefficient * result);
+	{
+		result = 10 * result + coefficient * (*str++ - '0');
+		if ((result >> 63) | 0x1 != coefficient)
+		{
+			if (coefficient == -1)
+				return (0);
+			else
+				return (-1);
+		}
+	}
+	return ((int)result);
 }
