@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:03:12 by thakala           #+#    #+#             */
-/*   Updated: 2021/11/28 17:23:18 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:33:52 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	ft_intlen(int n)
 		n /= 10;
 		l++;
 	}
-	return (l++);
+	return (l);
 }
 
 char	*ft_itoa(int n)
