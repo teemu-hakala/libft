@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:21:50 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/08 21:31:39 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/10 11:52:01 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,7 @@ size_t	ft_strcspn(const char *s, const char *charset);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	*ft_memjoin(const void *mem1, const void *mem2, \
 	size_t len1, size_t len2);
+char	ft_sign(long value);
+size_t	ft_abs(long value);
+
 #endif
