@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:35:21 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/04 19:14:27 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/16 20:11:46 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
-	if (!len)
-		return (dst);
 	i = (size_t)(-1);
 	if (src < dst)
 		while (--len + 1)
