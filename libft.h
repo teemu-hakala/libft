@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:21:50 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/10 16:36:49 by thakala          ###   ########.fr       */
+/*   Updated: 2021/12/22 04:53:33 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ char	ft_sign(long value);
 size_t	ft_abs(long value);
 t_list	*ft_lstpop(t_list *head, t_list *remove, \
 	void (*del)(void *d, size_t s));
+void	*ft_memrplc(void *mem, size_t len, int target, int filler);
 
 #endif
