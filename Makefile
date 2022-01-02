@@ -6,7 +6,7 @@
 #    By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 11:42:48 by thakala           #+#    #+#              #
-#    Updated: 2021/12/26 13:44:27 by thakala          ###   ########.fr        #
+#    Updated: 2022/01/02 09:08:11 by thakala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,11 +83,7 @@ FUNCTIONS = \
 	ft_sign \
 	ft_abs \
 	ft_lstpop \
-	ft_memrplc \
-	ft_htfetch \
-	ft_hthash \
-	ft_htnew \
-	ft_htupdate
+	ft_memrplc
 
 SRCS = $(foreach src, $(FUNCTIONS), $(addsuffix .c, $(src)))
 
