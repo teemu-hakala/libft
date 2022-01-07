@@ -6,7 +6,7 @@
 /*   By: thakala <thakala@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 04:46:27 by thakala           #+#    #+#             */
-/*   Updated: 2021/12/22 05:25:06 by thakala          ###   ########.fr       */
+/*   Updated: 2022/01/07 03:50:23 by thakala          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memrplc(void *mem, size_t len, int target, int filler)
 		if (!spot)
 			break ;
 		*(char *)spot = (char)filler;
-		idx += (size_t)(spot - mem) + 1;
+		idx = (size_t)(spot - mem) + 1;
 	}
 	return (mem);
 }
